@@ -87,7 +87,6 @@ public class Newton {
         res += arr[1][k] + findFk(k,k+1)* (x-arr[0][k]) + findFk(k,k+1,k+2) * (x-arr[0][k])* (x-arr[0][k+1]);
 
         k++;
-        res = 0;
         res+= arr[1][k] + findFk(k,k+1)* (x-arr[0][k]) + findFk(k,k+1,k+2) * (x-arr[0][k])* (x-arr[0][k+1]);
         res /=2;
 
