@@ -23,21 +23,32 @@ public class Lab3 {
         while ((tmp = inp.readLine())!= null ){
             String[] _tmp = tmp.split("\\s+");
             this.n = _tmp.length;
-            for(int j=0;j<_tmp.length;j++) arr[i][j] = Double.parseDouble(_tmp[j]);
+            for(int j=0;j<n;j++) arr[i][j] = Double.parseDouble(_tmp[j]);
             i++;
         }
     }
 
     public void process(){
         double x1 =0.610;
+  /*      //2.1
         linear tmp = new linear(arr,x1,n);
         System.out.println(tmp.solve());
 
         Quadratic _tmp = new Quadratic(arr,x1,n);
         System.out.println(_tmp.solve());
 
+        //2.2
         Lagrange tmp_ = new Lagrange(arr,x1,n);
         System.out.println(tmp_.solve());
+
+        //2.3
+        Newton duc = new Newton(arr,n);
+        System.out.println(duc.solve_equal(0.22));
+        System.out.println(duc.solve_equal(0.42));
+*/
+        //2.4
+        Newton duc = new Newton(arr,n);
+        System.out.println(duc.solve_not_equal(0.22));
     }
 
     public static void main(String[] args) throws IOException{
